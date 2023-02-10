@@ -1,0 +1,127 @@
+﻿<Page x:Class="MusiikkiSovellusProto.Page_Contact"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign1="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MusiikkiSovellusProto"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_Contact">
+
+    <Grid Background="{x:Null}">
+
+        <materialDesign1:Card Margin="10" UniformCornerRadius="20" Background="{x:Null}">
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0.4, -.1" EndPoint="0.8, 1">
+                        <GradientStop Color="#FF031D0B" Offset="1"/>
+                        <GradientStop Color="#FF1A0E2B" Offset="0"/>
+
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid Height="22.5" Background="#FF080230" Opacity="0.65" UseLayoutRounding="True" />
+                <Grid x:Name="gd_LeftBar" Height="500" Width="150" Background="#FF130000" Opacity="0.2" UseLayoutRounding="True" HorizontalAlignment="Left"/>
+
+
+
+
+
+
+
+
+
+
+            </StackPanel>
+        </materialDesign1:Card>
+        <Label x:Name="lblOtaYhteyttä" FontSize="40" Content="Ota yhteyttä!" HorizontalAlignment="Left" Margin="341,59,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="lblGitHub" FontSize="15" Content="Tältä sivulta löydät kaikki käyttäjäni sosiaalisessa mediassa." HorizontalAlignment="Left" Margin="251,141,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontWeight="Bold" FontStyle="Italic"/>
+
+
+        <Border BorderThickness="4" BorderBrush="#FF3AB73A" Margin="237,188,420,43" CornerRadius="25" >
+            <Border.Background>
+                <SolidColorBrush Color="#FF033601" Opacity="0.2"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="4" BorderBrush="#FFB73A3A" Margin="410,186,247,43" CornerRadius="25" >
+            <Border.Background>
+                <SolidColorBrush Color="#FF360101" Opacity="0.2"/>
+            </Border.Background>
+
+        </Border>
+        <Border BorderThickness="4" BorderBrush="#FFB77E3A" Margin="567,187,90,42" CornerRadius="25" >
+            <Border.Background>
+                <SolidColorBrush Color="#FF2A3601" Opacity="0.2"/>
+            </Border.Background>
+        </Border>
+
+        <Button x:Name="btnGitHub" BorderThickness="2" Content="Git Hub" HorizontalAlignment="Left" Margin="237,351,0,0" VerticalAlignment="Top" BorderBrush="#FF3AB73A" Width="143" Click="btnGitHub_Click" Height="27" FontStretch="Condensed" >
+            <Button.Background>
+                <SolidColorBrush Color="#FF033601" Opacity="0.2"/>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20" ></Setter>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Button x:Name="btnYouTube" BorderThickness="2" Content="YouTube" HorizontalAlignment="Left" Margin="410,351,0,0" VerticalAlignment="Top" BorderBrush="#FFB73A3A" Width="143" Click="btnYouTube_Click" Height="27" FontStretch="Condensed">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+
+            <Button.Background>
+                <SolidColorBrush Color="#FF360101" Opacity="0.2"/>
+            </Button.Background>
+
+        </Button>
+        <Button x:Name="btnPlutonium" BorderThickness="2" Content="Plutonium" HorizontalAlignment="Left" Margin="567,351,0,0" VerticalAlignment="Top" BorderBrush="#FFB77E3A" Click="btnPlutonium_Click" Height="27" Width="143" FontStretch="Condensed" FontSize="14" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Button.Resources>
+
+            <Button.Background>
+                <SolidColorBrush Color="#FF2A3601" Opacity="0.2"/>
+            </Button.Background>
+
+        </Button>
+        <Label x:Name="lblGit" Content="GitHub" FontSize="15" Foreground="AliceBlue " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="279,197,0,0" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1.4" Color="ForestGreen" />
+            </Label.Effect>
+
+        </Label>
+        <Label x:Name="lblYT" Content="YouTube" FontSize="15" Foreground="AliceBlue " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="447,197,0,0" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1.4" Color="PaleVioletRed" />
+            </Label.Effect>
+
+        </Label>
+        <Label x:Name="lblPluto" Content="Plutonium" FontSize="15" Foreground="AliceBlue " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="598,197,0,0" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1.4" Color="Yellow" />
+            </Label.Effect>
+
+        </Label>
+
+        <TextBlock x:Name="txtGit" Foreground="AliceBlue" FontSize="11" HorizontalAlignment="Right" Width="114" Margin="0,245,435,109" TextDecorations="{x:Null}" FontWeight="Normal" LineStackingStrategy="BlockLineHeight" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontFamily="Bahnschrift Light Condensed" ><Run Text="Painamalla alla olevasta linkistä, pääset git hub sivuilleni!"/><LineBreak/><Run Text="Git Hub sivuiltani voit löytää eri avoimen lähteen koodeja, joita olen luonut esimerkiksi Black Ops 2 peliin."></Run><Run/></TextBlock>
+        <TextBlock x:Name="txtYt1" Foreground="AliceBlue" FontSize="10.5" HorizontalAlignment="Left" Width="118" Margin="422,245,0,170" TextDecorations="{x:Null}" FontWeight="Normal" LineStackingStrategy="BlockLineHeight" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontFamily="Bahnschrift Light Condensed" Text="Youtube kanavaltani voit löytää koodausprojekteihin liittyvää materiaalia." />
+        <TextBlock x:Name="txtYt2" Foreground="AliceBlue" FontSize="10.5" HorizontalAlignment="Left" Width="117" Margin="423,290,0,109" TextDecorations="{x:Null}" FontWeight="Normal" LineStackingStrategy="BlockLineHeight" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontFamily="Bahnschrift Light Condensed" Text="Youtube linkki ohjaa sinut suoraan kanavalleni, seuraamaan uusimpia kehityksiä!" />
+        <TextBlock x:Name="txtPluto" Foreground="AliceBlue" FontSize="11" HorizontalAlignment="Left" Width="118" Margin="580,245,0,153" TextDecorations="{x:Null}" FontWeight="Normal" LineStackingStrategy="BlockLineHeight" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontFamily="Bahnschrift Light Condensed" Text="Plutonium käyttäjätilini! Tule seuraamaan profiiliani, niinkuin moni muukin jo tekee!!" />
+        <TextBlock x:Name="txtPluto2" Foreground="AliceBlue" HorizontalAlignment="Left" Width="118" Margin="580,297,0,101" TextDecorations="{x:Null}" FontWeight="Normal" LineStackingStrategy="BlockLineHeight" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontFamily="Bahnschrift Light Condensed" Text="Tililtäni löydät kaikki uusimmat modi uploadit ja foorumi keskustelut." />
+        <Label x:Name="Otto" Content="Otto Vänttinen 2022" HorizontalAlignment="Left" Margin="663,413,0,0" VerticalAlignment="Top" Foreground="AliceBlue" FontStyle="Italic"/>
+        <Image x:Name="imgGit1" Margin="251,358,534,77" Stretch="Fill" Source="/github.png"/>
+        <Image x:Name="imgGit2" Margin="350,358,435,77" Stretch="Fill" Source="/github.png"/>
+        <Image x:Name="imgYt1" Margin="422,358,363,78" Stretch="Fill" Source="/youtube.png"/>
+        <Image x:Name="imgYt2" Margin="525,358,260,78" Stretch="Fill" Source="/youtube.png"/>
+        <Image x:Name="imgPluto1" Margin="580,358,205,77" Stretch="Fill" Source="/pluto.png"/>
+        <Image x:Name="imgPluto2" Margin="683,358,102,77" Stretch="Fill" Source="/pluto.png"/>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,160 @@
+﻿<Page x:Class="MusiikkiSovellusProto.Page_Library"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign1="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MusiikkiSovellusProto"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_Library">
+
+
+    <Grid Background="{x:Null}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="163*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <materialDesign1:Card Margin="10,10,10,10" UniformCornerRadius="20" Background="{x:Null}" Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0.4, -.1" EndPoint="0.8, 1">
+                        <GradientStop Color="#FF1D0317" Offset="1"/>
+                        <GradientStop Color="#FF161525" Offset="0"/>
+
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid x:Name="gd_TopBarLibrary" Height="22.5" Opacity="0.65" UseLayoutRounding="True" >
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.3,0.9" StartPoint="0.5,1">
+                            <GradientStop Color="#FF060325" Offset="1"/>
+                            <GradientStop Color="#FF1D0317"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                </Grid>
+                <Grid x:Name="gd_LeftBarLibrary" Height="500" Width="150" Background="#FF130000" Opacity="0.2" UseLayoutRounding="True" HorizontalAlignment="Left"/>
+
+
+
+
+
+            </StackPanel>
+        </materialDesign1:Card>
+        <Border BorderThickness="4" CornerRadius="25" Margin="20,39,316,79" Grid.Column="1" Background="#FFFF00AE">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="#FF211525" Opacity="0"/>
+            </Border.BorderBrush>
+        </Border>
+        <Label x:Name="lblNowPlaying" Opacity="1" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Content="Kirjasto" Margin="42,36,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Width="137" FontWeight="Bold" Foreground="#DDE8E8E8" FontStyle="Italic" Grid.Column="1" >
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="DarkViolet" />
+            </Label.Effect>
+            <Label.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Border BorderThickness="4" CornerRadius="25" Margin="24,101,191,0" Grid.Column="1" Background="#FF450563">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="#FF211525" Opacity="0"/>
+            </Border.BorderBrush>
+        </Border>
+        <Label x:Name="lblNowPlaying_Copy" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Content="Valitse toistettavat kappaleet&#xA;&quot;Täytä Kappalelista&quot; kohdasta." Margin="42,114,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="48" Width="266" FontWeight="Bold" Foreground="#DDF0F0F0" FontStyle="Italic" Grid.Column="1" >
+            <Label.Effect>
+                <DropShadowEffect Color="Aquamarine" ShadowDepth="1.4"/>
+            </Label.Effect>
+        </Label>
+        <TextBlock x:Name="txtBlockLibraInfo" Opacity="0"  HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="White" Margin="30,0,0,0" Height="114" Width="571" FontSize="20" Grid.Row="1" Grid.Column="1">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </TextBlock.Effect><Run Text="Moderni Wazo-soitin takaa laadukkaan kokemuksen."/><LineBreak/><Run Text="Luodaksesi itsellesi soittolistan, paina -Valitse Biisit kohdasta."/><LineBreak/><Run Text="Voit halutessasi valita useita kappaleita kerralla toistettavaksi"/><LineBreak/><Run Text="lähdekansiostasi Wazo-soittimeen."/></TextBlock>
+
+        <Button x:Name="btnKappaleHaku" Content="Täytä Kappalelista" HorizontalAlignment="Left" Margin="478,148,0,0" VerticalAlignment="Top" Click="btnHaeKappaleet_Click" Height="32" Width="146" Grid.Column="1" BorderBrush="#FF1C6D80">
+            <Button.Background>
+                <SolidColorBrush Color="#FF094E87" Opacity="0.3"/>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="lstKappaleet" Opacity="1" BorderThickness="4" Foreground="#FFE2E2E2" Margin="30,6,28,10" SelectionChanged="lstKappaleet_SelectionChanged" Grid.Column="1" Grid.Row="1" Style="{DynamicResource MaterialDesignListBox}" SelectionMode="Single" FlowDirection="LeftToRight" FontWeight="Bold" FontStyle="Italic" FontFamily="Global User Interface" FontSize="14">
+            <ListBox.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="DarkViolet"/>
+            </ListBox.Effect>
+            <ListBox.Background>
+                <SolidColorBrush Color="#BC27042E" Opacity="0.2"/>
+            </ListBox.Background>
+            <ListBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Repeat">
+                    <GradientStop Color="#FF1C6D80"/>
+                    <GradientStop Color="#FF2F0036" Offset="1"/>
+                </LinearGradientBrush>
+            </ListBox.BorderBrush>
+            <materialDesign1:DataGridComboBoxColumn/>
+        </ListBox>
+        <Border BorderThickness="4" CornerRadius="9" Margin="478,105,28,42" Grid.Column="1">
+            <Border.Background>
+                <SolidColorBrush Color="#FFECFF2C" Opacity="0.14"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="#FFFFAE00" Opacity="1"/>
+            </Border.BorderBrush>
+
+        </Border>
+        <Label x:Name="lblNowPlaying_Copy1" Opacity="1" FontSize="11" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Content="Tarvitsetko apua?" Margin="490,93,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="102" FontWeight="Bold" Foreground="#DDE8E8E8" FontStyle="Italic" Grid.Column="1" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="15" />
+            </Label.Effect>
+            <Label.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Label.Background>
+        </Label>
+
+        <Button x:Name="btnKirjastoHelpOpen" Content="" BorderThickness="1" Margin="594,113,0,0"  FontWeight="Bold" FontSize="9" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Height="17" Width="17" Click="btnKirjastoHelpOpen_Click" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="1"/>
+                </Style>
+            </Button.Resources>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Repeat">
+                    <GradientStop Color="#FF0D7002"/>
+                    <GradientStop Color="#FF76A622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF397409" Opacity="0.3"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnKirjastoHelpClose" Content="" BorderThickness="1" Margin="594,113,0,0"  FontWeight="Bold" FontSize="8" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Height="17" Width="17" Click="btnKirjastoHelpClose_Click" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="1                             "/>
+                </Style>
+            </Button.Resources>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Repeat">
+                    <GradientStop Color="#FF70022F"/>
+                    <GradientStop Color="#FFC7054C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF74093F" Opacity="0.3"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="lblq" Text="?" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="AliceBlue" Margin="600,113,0,0" FontWeight="Bold" Width="11" Height="13" Grid.Column="1" FontStyle="Normal" TextDecorations="{x:Null}" FontFamily="Ebrima">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Red" ShadowDepth="0.3" Opacity="0.5" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="lblx" Text="X" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="AliceBlue" Margin="599,113,0,0" FontWeight="Bold" Width="11" Height="13" Grid.Column="1" FontStyle="Normal" TextDecorations="{x:Null}" FontFamily="Ebrima">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FF43AA25" ShadowDepth="0.3" Opacity="0.5" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="341,49,0,0" VerticalAlignment="Top" Width="49" Source="/library.png"/>
+
+    </Grid>
+</Page>
