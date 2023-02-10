@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "G/VNYxKiOuvm4CxQIiw9NNUC/xUBkWHfopeOXjtDFFZLVAXu3rIMtS3fes8eJnaGUQlbzzvuhPsSDq/bJ69Otw==",
+  "success": true,
+  "projectFilePath": "E:\\Visual Studio Repos\\repos\\MusiikkiSovellusProto\\MusiikkiSovellusProto\\MusiikkiSovellusProto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\dev_ultimateman\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

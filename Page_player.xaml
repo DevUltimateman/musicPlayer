@@ -1,0 +1,125 @@
+﻿<Page x:Class="MusiikkiSovellusProto.Page_player"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign1="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MusiikkiSovellusProto"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_player">
+
+    <Grid Background="{x:Null}">
+
+        <materialDesign1:Card Margin="10" UniformCornerRadius="20" Background="{x:Null}">
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0.4, -.1" EndPoint="0.8, 1">
+                        <GradientStop Color="#FF0E1313" Offset="0.86"/>
+                        <GradientStop Color="#FF0E001F" Offset="0"/>
+
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid Height="22.5" Opacity="0.65" UseLayoutRounding="True" FlowDirection="LeftToRight" >
+                    <Grid.Background>
+                        <RadialGradientBrush SpreadMethod="Pad">
+                            <GradientStop Color="#FF01190B"/>
+                            <GradientStop Color="#FF19D3D3" Offset="50"/>
+                        </RadialGradientBrush>
+                    </Grid.Background>
+                </Grid>
+
+                <Grid x:Name="gd_LeftBar" Height="500" Width="150" Background="#FF130000" Opacity="0.2" UseLayoutRounding="True" HorizontalAlignment="Left"/>
+
+
+
+
+
+
+
+
+
+
+            </StackPanel>
+        </materialDesign1:Card>
+        <Image HorizontalAlignment="Left" Stretch="Fill" Height="408" Margin="160,32,0,0" VerticalAlignment="Top" Width="683" Source="/skynice.jpg" Opacity="0.2" />
+        <Image x:Name="img_now_playing"  Stretch="Fill" Source="musikplayerimg.png" RenderTransformOrigin="0.5,0.5" Margin="-305,-23,847,215">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="lblNowPlaying" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"   Content="Nyt soi&#xD;&#xA;&#xD;&#xA;" Margin="423,152,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="56" Width="108" FontWeight="Bold" Foreground="#DDE8E8E8" FontStyle="Normal" >
+            <Label.Effect>
+                <DropShadowEffect Color="LightBlue" ShadowDepth="2.4"/>
+            </Label.Effect>
+            <Label.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Image Margin="-454,-154,1154,-396"  Source="/FORWARD.png" RenderTransformOrigin="0.51,0.5"/>
+        <ProgressBar x:Name="progressBarPlayer" Visibility="Hidden" HorizontalAlignment="Left" Height="12" Margin="378,306,0,0" VerticalAlignment="Top" Width="327" Foreground="#FFC3C3C3" BorderBrush="#FFA80045" Background="#FF36172E"/>
+        <!---->
+        <!--
+        <Image Opacity="1" x:Name="PLAY" Source="/Images/PLAY.png" Margin="213,286,213,4" />
+        <Image Opacity="1" x:Name="FORWARD" Source="/Images/FORWARD.png" Margin="284,286,142,4" />
+        <Image Opacity="1" x:Name="BACKWARD" Source="/Images/BACKWARD.png" Margin="142,286,284,4" />
+        -->
+        <Label x:Name="lblNowPlaying_Copy" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Content="Valitse toistettavat kappaleet&#xD;&#xA;&quot;Valitse Biisit&quot; kohdasta." Margin="21,482,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="390" FontWeight="Bold" Foreground="#DDF0F0F0" FontStyle="Italic" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Label.Effect>
+        </Label>
+        <TextBlock x:Name="txtPlayerTime" HorizontalAlignment="Left" Opacity="1" Visibility="Visible"  VerticalAlignment="Top"   TextWrapping="Wrap" Foreground="AliceBlue" Margin="423,285,0,0" Width="260" FontWeight="Bold"/>
+        <TextBlock x:Name="txtNytSoi"  Foreground="#FFEAEEF1" TextAlignment="Left" FontSize="14" HorizontalAlignment="Left" Margin="490,230,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"  Height="41" Width="260"  FontWeight="Bold"  >
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="5"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Image x:Name="imgNytSoiIpod"  HorizontalAlignment="Left" Height="228" Margin="210,168,0,0" VerticalAlignment="Top" Width="181" Source="/newipod.png"/>
+        <TextBlock x:Name="txtPlayerSongName" HorizontalAlignment="Left" Opacity="1" Visibility="Visible"  VerticalAlignment="Top"  TextWrapping="Wrap"  Foreground="AliceBlue" Margin="423,233,0,0" Width="146" Height="26" Text="Kappale:" FontWeight="Bold" TextDecorations="Underline" FontFamily="Global Sans Serif" FontSize="14"/>
+        <Image x:Name="imgMusicIcon" HorizontalAlignment="Center" Height="20" Margin="0,236,0,0" VerticalAlignment="Top" Width="20" Source="/musicicon.png"/>
+        <Image x:Name="imgAikaaKul" HorizontalAlignment="Center" Height="20" Margin="0,285,0,0" VerticalAlignment="Top" Width="20" Source="/icons8-headphones-96.png"/>
+        <Border BorderThickness="2" CornerRadius="10" Margin="378,220,31,178">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63D7EA"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+        <Border BorderThickness="2" CornerRadius="10" Margin="378,277,31,137">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63D7EA"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+        <Border BorderThickness="4" CornerRadius="3" Margin="423,200,190,242">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63D7EA"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+        <TextBlock x:Name="txtkpl" HorizontalAlignment="Left" Margin="257,149,0,0" Text="Kappale" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Gainsboro" FontFamily="Bahnschrift SemiBold" FontStyle="Italic" TextDecorations="{x:Null}">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="LavenderBlush" ShadowDepth="2" Opacity="0.7"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="txtkplLuku" Text="" HorizontalAlignment="Left" Margin="305,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Gainsboro" FontFamily="Bahnschrift SemiBold" FontStyle="Italic" TextDecorations="{x:Null}"/>
+        <Image x:Name="imgSearch" HorizontalAlignment="Left" Height="32" Margin="553,163,0,0" VerticalAlignment="Top" Width="34" Source="/youtube.png" MouseLeftButtonDown="imgSearch_MouseLeftButtonDown" Cursor="Hand" />
+
+
+
+
+    </Grid>
+
+
+</Page>

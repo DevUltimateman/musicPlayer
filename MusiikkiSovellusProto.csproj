@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BACKWARD.png" />
+    <None Remove="FORWARD.png" />
+    <None Remove="github.png" />
+    <None Remove="icons8-headphones-96.png" />
+    <None Remove="ippod.png" />
+    <None Remove="library.png" />
+    <None Remove="musicicon.png" />
+    <None Remove="musikplayerimg.png" />
+    <None Remove="newipod.png" />
+    <None Remove="PLAY.png" />
+    <None Remove="playa.png" />
+    <None Remove="pluto.png" />
+    <None Remove="sky2.png" />
+    <None Remove="skynice.jpg" />
+    <None Remove="Sounds\nuketown_2.0_easter_egg_trailer_song_bass.wav" />
+    <None Remove="stop.png" />
+    <None Remove="toolclip1.png" />
+    <None Remove="volume.png" />
+    <None Remove="youtube.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="github.png" />
+    <Resource Include="icons8-headphones-96.png" />
+    <Resource Include="ippod.png" />
+    <Resource Include="library.png" />
+    <Resource Include="musicicon.png" />
+    <Resource Include="newipod.png" />
+    <Resource Include="playa.png" />
+    <Resource Include="pluto.png" />
+    <Resource Include="sky2.png" />
+    <Resource Include="skynice.jpg" />
+    <Resource Include="Sounds\nuketown_2.0_easter_egg_trailer_song_bass.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BACKWARD.png" />
+    <Resource Include="FORWARD.png" />
+    <Resource Include="musikplayerimg.png" />
+    <Resource Include="PLAY.png" />
+    <Resource Include="stop.png" />
+    <Resource Include="toolclip1.png" />
+    <Resource Include="volume.png" />
+    <Resource Include="youtube.png" />
+  </ItemGroup>
+
+</Project>
